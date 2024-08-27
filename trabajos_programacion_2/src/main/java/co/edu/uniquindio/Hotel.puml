@@ -1,0 +1,56 @@
+class Habitacion {
+    - numero: int
+    - tipo: String
+    - precio: double
+}
+
+class Reserva {
+    - habitacion: Habitacion
+    - cliente: Cliente
+    - fechaEntrada: Date
+    - fechaSalida: Date
+}
+
+class Cliente {
+    - nombre: String
+    - dni: String
+    - reservasActivas: List<Reserva>
+}
+
+abstract class Servicio {
+    + consumir(): void
+}
+
+class ServicioDeHabitacion extends Servicio {
+    + consumir(): void
+}
+
+class Spa extends Servicio {
+    + consumir(): void
+}
+
+class Restaurante extends Servicio {
+    + consumir(): void
+}
+
+class Limpieza extends Servicio {
+    + consumir(): void
+}
+
+interface Consumible {
+    + consumir(): void
+}
+
+' Relaciones de herencia
+Servicio <|-- ServicioDeHabitacion
+Servicio <|-- Spa
+Servicio <|-- Restaurante
+Servicio <|-- Limpieza
+
+' Implementación de la interfaz
+Servicio ..|> Consumible
+
+' Relaciones entre las clases
+Cliente "1" --> "0..*" Reserva : tiene
+Reserva "0..*" --> "1" Habitacion : asocia
+Habitacion "0..*" --> "0..*" Servicio : incluye
