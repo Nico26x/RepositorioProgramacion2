@@ -1,21 +1,24 @@
 package co.edu.uniquindio;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collection;
+
+
 
 public class Cliente {
     
     private final Collection<Reserva> reservas;
     private final String nombre;
     private final String dni;
-    private final int reservasActivas;
+    private int reservasActivas;
     
     public Cliente(String nombre, String dni, int reservasActivas) {
     
-        this.reservas = null;
+        this.reservas = new ArrayList<>();
         this.nombre = nombre;
         this.dni = dni;
-        this.reservasActivas = reservasActivas;
+        this.reservasActivas = 0;
     }
 
     public Collection<Reserva> getReservas() {
@@ -34,19 +37,16 @@ public class Cliente {
         return reservasActivas;
     }
 
-    public Reserva reservarHabitacion(Habitacion habitacion, LocalDate fechaEntrada, LocalDate fechaSalida){
+    public Reserva reservarHabitacion(Habitacion habitacion, LocalDate fechaEntrada, LocalDate fechaSalida ){
 
-        var reserva = new Reserva(new Simple(26, 150000.0), LocalDate.of(2024, 5, 28), LocalDate.of(2024, 5, 31));
+        Reserva reserva = new Reserva(habitacion, fechaEntrada, fechaSalida);
+        reservas.add(reserva);
+        reservasActivas++;
 
-        System.out.println("Reserva realizada con éxito{ numero de habitacion = 26, precio = 150.000" + 
-                            "fecha de entrada = " + fechaEntrada +
-                            ", fecha de salida = " + fechaSalida +
-                            ", nombre del cliente = " + nombre +
-                            ", dni del cliente = " + dni + 
-                            "}" );
         return reserva;
-
     }
+}
+
 
     
-}
+
