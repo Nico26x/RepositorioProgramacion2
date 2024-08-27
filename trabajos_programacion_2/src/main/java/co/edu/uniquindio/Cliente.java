@@ -38,7 +38,12 @@ public class Cliente {
 
         var reserva = new Reserva(new Simple(26, 150000.0), LocalDate.of(2024, 5, 28), LocalDate.of(2024, 5, 31));
 
-        System.out.println("Reserva realizada con éxito: " + reserva.toString());
+        System.out.println("Reserva realizada con éxito{ numero de habitacion = 26, precio = 150.000" + 
+                            "fecha de entrada = " + fechaEntrada +
+                            ", fecha de salida = " + fechaSalida +
+                            ", nombre del cliente = " + nombre +
+                            ", dni del cliente = " + dni + 
+                            "}" );
         return reserva;
 
     }
