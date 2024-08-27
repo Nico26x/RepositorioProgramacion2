@@ -8,10 +8,10 @@ public class Reserva {
     private LocalDate fechaEntrada;
     private LocalDate fechaSalida;
     
-    public Reserva(Habitacion habitacion, int i, int j) {
+    public Reserva(Habitacion habitacion, LocalDate localDate, LocalDate localDate2) {
         this.habitacion = habitacion;
-        this.fechaEntrada = i;
-        this.fechaSalida = j;
+        this.fechaEntrada = localDate;
+        this.fechaSalida = localDate2;
     }
 
     public Habitacion getHabitacion() {

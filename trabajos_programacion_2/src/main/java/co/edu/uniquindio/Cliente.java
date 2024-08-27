@@ -1,5 +1,6 @@
 package co.edu.uniquindio;
 
+import java.time.LocalDate;
 import java.util.Collection;
 
 public class Cliente {
@@ -33,9 +34,9 @@ public class Cliente {
         return reservasActivas;
     }
 
-    public Reserva reservarHabitacion(double numero){
+    public Reserva reservarHabitacion(Habitacion habitacion, LocalDate fechaEntrada, LocalDate fechaSalida){
 
-        var reserva = new Reserva(new Simple(26, 150000.0), 28/05/2024, 31/05/2024);
+        var reserva = new Reserva(new Simple(26, 150000.0), LocalDate.of(2024, 5, 28), LocalDate.of(2024, 5, 31));
 
         System.out.println("Reserva realizada con éxito: " + reserva.toString());
         return reserva;
