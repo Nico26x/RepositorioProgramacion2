@@ -11,7 +11,7 @@ public class Main {
 
         cliente.reservarHabitacion(26);
         
-        System.out.println("Hello world!");
+       
 
     }
 }

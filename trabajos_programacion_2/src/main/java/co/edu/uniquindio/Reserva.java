@@ -8,7 +8,7 @@ public class Reserva {
     private LocalDate fechaEntrada;
     private LocalDate fechaSalida;
     
-    public Reserva(Habitacion habitacion, int i, int j) {
+    public Reserva(Habitacion habitacion, LocalDate i, LocalDate j) {
         this.habitacion = habitacion;
         this.fechaEntrada = i;
         this.fechaSalida = j;

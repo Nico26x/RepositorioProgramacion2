@@ -3,7 +3,7 @@ package co.edu.uniquindio;
 public  abstract class Habitacion {
 
     private final int numero;
-    private final int precio;
+    private final double precio;
     
     public Habitacion(int numero, double precio) {
         this.numero = numero;
