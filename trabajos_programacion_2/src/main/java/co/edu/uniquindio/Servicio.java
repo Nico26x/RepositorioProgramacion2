@@ -1,8 +1,9 @@
 package co.edu.uniquindio;
 
-public class Servicio implements Iconsumible {
-
-    public void consumir(){
+public class Servicio implements Consumible {
+ 
+    public void consumir() {
+       
     }
 
 }

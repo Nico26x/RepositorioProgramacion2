@@ -1,3 +1,9 @@
+
+enum TipoHabitacion {
+    SIMPLE
+    DOBLE
+    SUITE
+}
 class Habitacion {
     - numero: int
     - tipo: String
@@ -18,7 +24,7 @@ class Cliente {
 }
 
 abstract class Servicio {
-    + consumir(): void
+    + consumible(): void
 }
 
 class ServicioDeHabitacion extends Servicio {
@@ -46,6 +52,7 @@ Servicio <|-- ServicioDeHabitacion
 Servicio <|-- Spa
 Servicio <|-- Restaurante
 Servicio <|-- Limpieza
+Habitacion <|-- TipoHabitacion
 
 ' Implementación de la interfaz
 Servicio ..|> Consumible
