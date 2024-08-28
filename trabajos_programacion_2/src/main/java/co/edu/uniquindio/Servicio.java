@@ -1,8 +1,8 @@
 package co.edu.uniquindio;
 
-public class Servicio implements Consumible {
+public abstract class Servicio implements Consumible {
  
-    public void consumir() {
+    public void consumible() {
        
     }
 

@@ -12,7 +12,7 @@ public abstract class Habitacion {
      * Método constructor de la clase abstracta Habitacion
      * 
      * @param numero, el numero de la habitacion
-     * @param tipoHabitacion el tipo de habitación
+     * @param precio el tipo de habitación
      */
     public Habitacion(int numero, TipoHabitacion tipoHabitacion) {
         this.numero = numero;
